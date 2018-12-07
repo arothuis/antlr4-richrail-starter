@@ -4,7 +4,7 @@ This project is part of an assignment for
 Patterns and Frameworks at the Hogeschool Utrecht.
 
 # How do I set this up?
-* The project uses Java 11, but you can change this in pom.xml if need be
+* The project uses Java 11, but you can change this in `pom.xml` if need be
 * Install packages using Maven (see `pom.xml`)
 * This automatically generates
  the required classes through ANTLR4
