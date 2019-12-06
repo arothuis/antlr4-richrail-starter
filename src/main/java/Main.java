@@ -18,9 +18,12 @@ public class Main {
         RichRailParser parser = new RichRailParser(tokens);
         ParseTree tree = parser.command();
 
+        // Create train service (can be varied later)
+        TrainService trainService = new PrintingTrainService();
+
         // Create ParseTreeWalker and Custom Listener
         ParseTreeWalker walker = new ParseTreeWalker();
-        RichRailListener listener = new RichRailCli();
+        RichRailListener listener = new RichRailCli(trainService);
 
         // Walk over ParseTree using Custom Listener that listens to enter/exit events
         walker.walk(listener, tree);
